@@ -10,7 +10,7 @@ namespace ClassLibrary1.Page
     public class BaigiamasisDPage : BaseDriver
     {
         private string pageAddress => "https://www.mokivezi.lt";
-        private IWebElement closeButton => Driver.FindElement(By.CssSelector(".omnisend-form-63640f045c27608904321f6e-close-action"));
+        private IWebElement closePopupButton => Driver.FindElement(By.CssSelector(".omnisend-form-63285e2b018728915f150e04-close-action"));
         private IWebElement inputField => Driver.FindElement(By.Id("search"));
         private IWebElement searchButton => Driver.FindElement(By.CssSelector(".btn.btn-primary.header-search-form__submit-btn.medium-link"));
         private IWebElement closeCookiesButton => Driver.FindElement(By.CssSelector(".cookie-notice__btn.btn.btn-primary"));
@@ -35,12 +35,12 @@ namespace ClassLibrary1.Page
         }
         public void CloseButton()
         {
-            closeButton.Click();
+            closePopupButton.Click();
 
         }
-        public void InsertTextToInputField()
+        public void InsertTextToInputField(string text)
         {
-            inputField.SendKeys("tapetų klijai Metylan 180 g");
+            inputField.SendKeys(text);
         }
         public void SearchButton()
         {
@@ -108,7 +108,7 @@ namespace ClassLibrary1.Page
     public class BaigiamasisDPage2 : BaseDriver
     {
         private string pageAddress => "https://www.mokivezi.lt";
-        private IWebElement closeButton => Driver.FindElement(By.CssSelector(".omnisend-form-63640f045c27608904321f6e-close-action"));
+        private IWebElement closePopupButton => Driver.FindElement(By.CssSelector(".omnisend-form-63285e2b018728915f150e04-close-action"));
         private IWebElement closeCookiesButton => Driver.FindElement(By.CssSelector(".cookie-notice__btn.btn.btn-primary"));
         private IWebElement contactsButton => Driver.FindElement(By.CssSelector("#footer > div.container.footer__grid > div:nth-child(1) > div.col-12.col-lg-9 > div > div:nth-child(3) > ul > li:nth-child(1) > a"));
         private IWebElement selectKaunasButton => Driver.FindElement(By.CssSelector("#citySelect > option:nth-child(5)"));
@@ -124,7 +124,7 @@ namespace ClassLibrary1.Page
         }
         public void CloseButton()
         {
-            closeButton.Click();
+            closePopupButton.Click();
         }
         public void CloseCookiesButton()
         {
@@ -175,7 +175,7 @@ namespace ClassLibrary1.Page
     public class BaigiamasisDPage3 : BaseDriver
     {
         private string pageAddress => "https://www.mokivezi.lt";
-        private IWebElement closeButton => Driver.FindElement(By.CssSelector(".omnisend-form-63640f045c27608904321f6e-close-action"));
+        private IWebElement closePopupButton => Driver.FindElement(By.CssSelector(".omnisend-form-63285e2b018728915f150e04-close-action"));
         private IWebElement closeCookiesButton => Driver.FindElement(By.CssSelector(".cookie-notice__btn.btn.btn-primary"));
         private IWebElement eParduotuveButton => Driver.FindElement(By.CssSelector(".header-categories__link.header-categories__link--account.link-unstyled.d-inline-block"));
         private IReadOnlyCollection<IWebElement> elementsCollection => Driver.FindElements(By.CssSelector(".btn-block.mini-cart__btn"));
@@ -188,7 +188,7 @@ namespace ClassLibrary1.Page
         }
         public void CloseButton()
         {
-            closeButton.Click();
+            closePopupButton.Click();
         }
         public void CloseCookieButton()
         {
@@ -210,7 +210,7 @@ namespace ClassLibrary1.Page
         public class BaigiamasisDPage4 : BaseDriver
         {
             private string pageAddress => "https://www.mokivezi.lt";
-            private IWebElement closeButton => Driver.FindElement(By.CssSelector(".omnisend-form-63640f045c27608904321f6e-close-action"));
+            private IWebElement closePopupButton => Driver.FindElement(By.CssSelector(".omnisend-form-63285e2b018728915f150e04-close-action"));
             private IWebElement closeCookiesButton => Driver.FindElement(By.CssSelector(".cookie-notice__btn.btn.btn-primary"));
             private IWebElement inputField => Driver.FindElement(By.Id("search"));
             private IWebElement searchButton => Driver.FindElement(By.CssSelector(".btn.btn-primary.header-search-form__submit-btn.medium-link"));
@@ -222,15 +222,15 @@ namespace ClassLibrary1.Page
             }
             public void CloseButton()
             {
-                closeButton.Click();
+                closePopupButton.Click();
             }
             public void CloseCookiesButton()
             {
                 closeCookiesButton.Click();
             }
-            public void InsertTextToInputField()
+            public void InsertTextToInputField(string text)
             {
-                inputField.SendKeys("Blick 10");
+                inputField.SendKeys(text);
             }
             public void SearchButton()
             {
@@ -249,7 +249,7 @@ namespace ClassLibrary1.Page
         public class BaigiamasisDPage5 : BaseDriver
         {
             private string pageAddress => "https://www.mokivezi.lt";
-            private IWebElement closePopUpButton => Driver.FindElement(By.CssSelector(".omnisend-form-63640f045c27608904321f6e-close-action"));
+            private IWebElement closePopUpButton => Driver.FindElement(By.CssSelector(".omnisend-form-63285e2b018728915f150e04-close-action"));
             private IWebElement inputField => Driver.FindElement(By.Id("search"));
             private IWebElement searchButton => Driver.FindElement(By.CssSelector(".btn.btn-primary.header-search-form__submit-btn.medium-link"));
             private IWebElement closeCookiesButton => Driver.FindElement(By.CssSelector(".cookie-notice__btn.btn.btn-primary"));
@@ -272,9 +272,9 @@ namespace ClassLibrary1.Page
             {
                 closePopUpButton.Click();
             }
-            public void InsertTextToInputField()
+            public void InsertTextToInputField(string text)
             {
-                inputField.SendKeys("tapetų klijai Metylan 180 g");
+                inputField.SendKeys(text);
             }
             public void SearchButton()
             {
@@ -312,17 +312,28 @@ namespace ClassLibrary1.Page
             {
                 methylanWoodchip2Button.Click();
             }
-            public void MethylanWoodchipElement2()
+            public void MethylanWoodchipElement2(string KiekisDu)
             {
                 methylanWoodchipElement2.Click();
             }
-            public void MethylanVinylAndSpezial1Element()
+            public void MethylanVinylAndSpezial1Element(string KiekisVienas)
             {
                 methylanVinylAndSpezial1Element.Click();
             }
             public void TwoCountResult()
             {
                 Assert.AreNotSame(methylanWoodchipElement2, methylanVinylAndSpezial1Element, "are equal");
+            }
+            public void IntTwoCount()
+            {
+                string KiekisDu = "2";
+                string KiekisVienas = "1";
+                int x1, x2;
+                bool woodchipElementCount = int.TryParse(KiekisDu, out x1);
+
+                bool methylanVinylCount = int.TryParse(KiekisVienas, out x2);
+
+                Assert.IsTrue(x1 > x2, "No,{woodchipElementCount} is less than {methylanVinylCount} ");
             }
 
         }

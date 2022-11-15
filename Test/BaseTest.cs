@@ -39,11 +39,11 @@ namespace BaigiamasisDarbas.Test
             }
         }
 
-        [OneTimeTearDown]
-        public static void OneTimeTearDown()
-        {
-            chromeDriver.Quit();
-        }
+        //[OneTimeTearDown]
+        //public static void OneTimeTearDown()
+        //{
+        //    chromeDriver.Quit();
+        //}
 
     }
 }

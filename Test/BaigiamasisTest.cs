@@ -16,7 +16,7 @@ namespace ClassLibrary2.Test
 
             page.NavigateToPage();
             page.CloseButton();
-            page.InsertTextToInputField();
+            page.InsertTextToInputField("tapetų klijai Metylan 180 g");
             page.SearchButton();
             page.CloseCookiesButton();
             page.AddToCardFirstButton();
@@ -75,7 +75,7 @@ namespace ClassLibrary2.Test
             page.NavigateToPage();
             page.CloseButton();
             page.CloseCookiesButton();
-            page.InsertTextToInputField();
+            page.InsertTextToInputField("Blick 10");
             page.SearchButton();
             page.ResultKeyElement();
             page.SearchVerifyResult();
@@ -88,7 +88,7 @@ namespace ClassLibrary2.Test
 
             page.NavigateToPage();
             page.CloseButton();
-            page.InsertTextToInputField();
+            page.InsertTextToInputField("tapetų klijai Metylan 180 g");
             page.SearchButton();
             page.CloseCookiesButton();
             page.AddToCardFirstButton();
@@ -98,9 +98,10 @@ namespace ClassLibrary2.Test
             page.ContinueCardButton();
             page.CardButton();
             page.MethylanWoodchip2Button();
-            page.MethylanWoodchipElement2();
-            page.MethylanVinylAndSpezial1Element();
+            page.MethylanWoodchipElement2("2");
+            page.MethylanVinylAndSpezial1Element("1");
             page.TwoCountResult();
+            page.IntTwoCount();
         }
 
     }
